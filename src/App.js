@@ -1,11 +1,23 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+import Header from './components/Header';
+import appStore from './utils/appStore';
+import { Provider } from 'react-redux';
 
 function App() {
+
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Header />
+    }
+  ]);
+
   return (
-    <div className="App">
-      <h1 className="text-red-600">Header</h1>
-    </div>
+    <Provider store={appStore}>
+      <RouterProvider router={appRouter}> </RouterProvider>
+    </Provider>
   );
-}
+};
 
 export default App;
