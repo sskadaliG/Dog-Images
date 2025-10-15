@@ -1,11 +1,6 @@
 import Tab from './Tab';
-import { useSelector } from 'react-redux';
-import useDogList from '../hooks/useDogList';
 
-const TabList = () => {
-    const list = useSelector((store) => store.dog.dogList);
-
-    useDogList();
+const TabList = ({ list }) => {
 
     return (
         <div className="flex p-4 overflow-x-scroll gap-4">

@@ -1,6 +1,6 @@
 import Search from './Search';
 import Body from './Body';
-import { DOG_IMG } from '../utils/constants';
+import { DOG_IMG } from '../utils/constants'
 
 const Header = () => {
     return (
@@ -17,4 +17,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Header

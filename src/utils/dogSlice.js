@@ -4,15 +4,19 @@ const dogSlice = createSlice({
     name: "dog",
     initialState: {
         dogList: [],
-        dogPoster: "",
+        breedList: [],
+        subBreeds: { breed: "", subBreed: [] },
         breedName: "australian"
     },
     reducers: {
         setDogsList: (state, action) => {
             state.dogList = action.payload;
         },
-        addDogPoster: (state, action) => {
-            state.dogList = action.payload;
+        addBreedList: (state, action) => {
+            state.breedList = action.payload;
+        },
+        addSubBreeds: (state, action) => {
+            state.subBreeds = action.payload;
         },
         addBreedName: (state, action) => {
             state.breedName = action.payload;
@@ -21,4 +25,4 @@ const dogSlice = createSlice({
 });
 
 export default dogSlice.reducer;
-export const { setDogsList, addDogPoster, addBreedName } = dogSlice.actions;
+export const { setDogsList, addBreedList, addBreedName, addSubBreeds } = dogSlice.actions;
